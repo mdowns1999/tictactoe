@@ -27,3 +27,6 @@ Down beow is a lits of sources I used to help complete this project.
 Here is a list of future tasks I may implement in my code.  No code is perfect, but if I get the chance here is what I will do to enhace or improve my code.
 * I would like to see if I can make it where other size boards can work with this program.
 * Possible make a GUI instead of displaying to the terminal.
+
+# Design Documents
+

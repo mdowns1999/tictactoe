@@ -38,6 +38,11 @@ void Board::updateBoard(int move, bool xTurn)
       board[move - 1] = O;
 }
 
+/******************************************
+*SAVE BOARD
+*
+* Save the Tic Tac toe Board to a file
+*******************************************/
 void Board::saveBoard()
 {
  // Open the file.
@@ -45,7 +50,7 @@ void Board::saveBoard()
  if (fin.fail())
     return;
 
- // For each value.
+ // For each value from the file.
  for (auto num : board)
  {
     // Write to the file
@@ -56,6 +61,11 @@ void Board::saveBoard()
  fin.close();
 }
 
+/******************************************
+*LOAD BOARD
+*
+* Load the Tic Tac toe Board to a file
+*******************************************/
 void Board::loadBoard()
 {
    char value;

@@ -12,6 +12,7 @@
 
 #pragma once
 #include "board.h";
+#include <sstream> // This will allow us to convert strings into ints in the program
 
 
 class Game
@@ -19,6 +20,8 @@ class Game
 private:
    /*These Variables are the characters we will use to play the game.*/
    int playerMove = 0;
+   string move;
+   stringstream toString;
    char BLANK = '-';
    Board b;
 
@@ -30,8 +33,6 @@ public:
    void markMove();
    bool isWinner();
    bool isXTurn();
-   bool isValid(const int playerMove);
-
-
+   bool isValid(int &playerMove);
 };
 

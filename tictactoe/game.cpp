@@ -26,11 +26,11 @@ void Game::playGame()
       << "\n 7 | 8 | 9 "
       << endl;
 
-   int newGame;
-   cout << "If you started a previous game.  Type in -2. If not, type 1." << endl;
+   string newGame;
+   cout << "If you started a previous game.  Type in L.  If not, type anything else" << endl;
    cin >> newGame;
 
-   if (newGame == -2)
+   if (newGame == "l" || newGame == "L")
    {
       b.loadBoard();
 
@@ -79,43 +79,6 @@ bool Game::isXTurn()
       return false;
    else
       return true;
-}
-
-/******************************************
-* IS VALID
-*
-* Checks if the input is valid
-*******************************************/
-bool Game::isValid(const int playerMove)
-{
-   //try
-   //{
-   //   cout<< "True or False: " << isdigit(playerMove) << endl;
-
-   //   if (sizeof(playerMove) == sizeof(int))
-   //   {
-   //      if (b.board[playerMove - 1] != BLANK)
-   //      {
-   //         cout << "Move is invalid.  Player: " << b.board[playerMove - 1]
-   //            << " is in that spot!" << endl;
-   //         return false;
-   //      };
-   //      return true;
-   //   }
-   //}
-   //catch (...)
-   //{
-   //   cout << "Invalid character!  Please enter a value between 1 and 9!" << endl;
-   //}
-
-   if (b.board[playerMove - 1] != BLANK)
-      {
-         cout << "Move is invalid.  Player: " << b.board[playerMove - 1]
-              << " is in that spot!" << endl;
-          return false;
-      };
-
-   return true;
 }
 
 /******************************************
@@ -172,6 +135,30 @@ bool Game::isWinner()
 }
 
 /******************************************
+* IS VALID
+*
+* Checks if the input is valid
+*******************************************/
+bool Game::isValid( int &playerMove)
+{   
+   //Check if the move is in a valid range
+   if (playerMove == 0 || playerMove > 9)
+   {
+      cout << "Move is invalid.  Please enter another number" << endl;
+      return false;
+   }
+   
+   //Check if spot is already taken
+   if (b.board[playerMove - 1] != BLANK)
+   {
+      cout << "Move is invalid. Player: " << b.board[playerMove - 1] << " Is in that spot!" << endl;
+      return false;
+   };
+
+   return true;
+}
+
+/******************************************
 * MAKE MOVE
 *
 * Allows player to make a move
@@ -183,11 +170,21 @@ bool Game::makeMove()
    while (!valid)
    {
       cout << "Choose a Square to Move to: " << endl;
-      cin >> playerMove;
+      cin >> move;
 
       //If the player is saving the board, if not continue as normal
-      if (playerMove == -1)
+      if (move == "s")
          return false;
+
+      //Convert the move to an int
+      toString << move;
+      toString >> playerMove;
+
+      //Clear the library and reset it to string for the next input.
+      toString.clear();
+      toString.str("");
+
+
 
       //Check if the move is valid.
       valid = isValid(playerMove);

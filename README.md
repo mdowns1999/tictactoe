@@ -14,13 +14,16 @@ The main development enviroment I used was Visual Studio Community.  It is produ
 
 When I used C ++, I use the std library.  At the top of the files I wrote a line like: "#include iostream" so I did not have to write std:: all the time.  That way I can use short hand cin or cout for any output to the terminal.  I also imported a string libray to use stings, a file library called "fstream" to help with the writing and reading of files.  
 
+A unique libray I used was stringStreaming.  The library basically takes in a string and converts it to an int.  If a letter or symbol that is not an int it put in, it will return a 0.  I used this to help prevent the program from breaking and to be more robust.
+
 # Useful Websites
 Down beow is a lits of sources I used to help complete this project.  
 * [Geeks for Geeks Reading or Writing to a file](https://www.geeksforgeeks.org/cpp-program-to-read-content-from-one-file-and-write-it-into-another-file/)
 * [C++ W3 Schools Tutorial](https://www.w3schools.com/cpp/default.asp)
+* [Code Camp using stringStreaming](https://www.freecodecamp.org/news/string-to-int-in-c-how-to-convert-a-string-to-an-integer-example/)
+* [How to reset stringStreaming](https://topitanswers.com/post/c-extract-int-from-string-using-stringstream)
 
 # Future Work
 Here is a list of future tasks I may implement in my code.  No code is perfect, but if I get the chance here is what I will do to enhace or improve my code.
-* User validation.  When a char is entered, an infinite loop occurs.  I am planning on adding a try catch block to help solve this problem.
 * I would like to see if I can make it where other size boards can work with this program.
-* Clean up any unused or unnessicary code.
+* Possible make a GUI instead of displaying to the terminal.

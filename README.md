@@ -30,3 +30,7 @@ Here is a list of future tasks I may implement in my code.  No code is perfect, 
 
 # Design Documents
 
+## Class Diagram
+![Class Diagrams](images/classDiagrams.png)
+## Structure Chart
+![Structure Chart](images/tictactoeStructureChart.png)

@@ -29,6 +29,7 @@ Here is a list of future tasks I may implement in my code.  No code is perfect, 
 * Possible make a GUI instead of displaying to the terminal.
 
 # Design Documents
+Below are two design charts relating to the program.  The first one is a class diagram showing the structure of the class and the second one is a structure chart showing how all the mthods work with one another.
 
 ## Class Diagram
 ![Class Diagrams](images/classDiagrams.png)

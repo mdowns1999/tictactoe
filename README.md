@@ -6,7 +6,7 @@ The software I wrote is to help demonstrate principles of the C++ language.  I m
 
 The video down below is a demostration video of me running through the program on my computer.  Feel free to click on the link to check it out!
 
-[Tic Tac Toe Demo Video](http://youtube.link.goes.here)
+[Tic Tac Toe Demo Video](http://youtu.be/GPxzPEJ0iSQ?hd=1)
 
 # Development Environment
 
